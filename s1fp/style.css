@@ -1,0 +1,12 @@
+body {
+    background-color:red;
+    color:white;
+}
+
+#page1 {
+    background-color: green;
+}
+
+.smallimg{
+    width: 200px;
+}
