@@ -33,7 +33,7 @@ h1 {
 }
 
 .sketch img {
-  width: 80%;
+  width: 100%;
 }
 
 /* Positioning each sketch */
@@ -42,7 +42,7 @@ h1 {
 .s2 { top: 0%; left: 60%; }
 .s3 { top: 50%; left: 45%; }
 .s4 { top: 25%; left: 35%; }
-.s5 { top: 90%; left: 55%; }
+.s5 { top: 40%; left: 25%; }
 
 /* HOVER MOVEMENT */
 
