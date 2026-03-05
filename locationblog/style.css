@@ -1,0 +1,130 @@
+/* GENERAL */
+
+body {
+  margin: 0;
+  font-family: Times, sans-serif;
+  background: #bec6e0;
+}
+
+h1 {
+  text-align: center;
+  padding: 2vh;
+}
+
+/* MAP */
+
+.map-container {
+  position: relative;
+  width: 100%;
+}
+
+.map {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* SKETCH MARKERS */
+
+.sketch {
+  position: absolute;
+  width: 6vw;
+  transition: transform 0.4s ease;
+}
+
+.sketch img {
+  width: 80%;
+}
+
+/* Positioning each sketch */
+
+.s1 { top: 30%; left: 48%; }
+.s2 { top: 0%; left: 60%; }
+.s3 { top: 50%; left: 45%; }
+.s4 { top: 25%; left: 35%; }
+.s5 { top: 90%; left: 55%; }
+
+/* HOVER MOVEMENT */
+
+.sketch:hover {
+  transform: translateY(-10px) rotate(-5deg);
+}
+
+.sketch:active {
+  transform: scale(1.1);
+}
+
+.sketch:focus {
+  outline: 2px solid black;
+}
+
+/* POPUP */
+
+.popup {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30vw;
+  background: white;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.popup img {
+  width:60%;
+  transition: transform 0.3s ease;
+}
+
+/* Twist image on hover */
+
+.popup img:hover {
+  transform: rotate(3deg);
+}
+
+.popup:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.close {
+  display: inline-block;
+  margin-top: 1rem;
+  text-decoration: none;
+  background: black;
+  color: white;
+  padding: 0.5rem 1rem;
+}
+
+/* MEDIA QUERIES */
+
+/* Tablet */
+@media (max-width: 500px) {
+  .sketch {
+    width: 10vw;
+  }
+  .popup {
+    width: 80vw;
+  }
+}
+
+/* Mobile */
+@media (max-width: 300px) {
+  .sketch {
+    width: 15vw;
+  }
+  .popup {
+    top: 10%;
+    width: 90vw;
+  }
+}
+
+/* Large Screens */
+@media (min-width: 1100px) {
+  .sketch {
+    width: 4vw;
+  }
+}
