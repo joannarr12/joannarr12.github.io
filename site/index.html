@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<head>
+    <title>ifttt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="title">Going on vacation soon?</div>
+    <div class="hero-image"></div>
+
+    <table>
+        <tr>
+            <td style="vertical-align: top;">
+                <div class="bodytxtcontainer">
+                    <div class="bodytxt">Tired of being constantly asked to share trip pics?</div>
+                </div>
+                <div class="bodytxtcontainer">
+                    <div class="bodytxt">Tired of your friends not sharing the trip pics?</div>
+                </div>
+                <div class="bodytxtcontainer">
+                    <div class="bodytxt">We have just the thing for you!</div>
+                </div>
+            </td>
+            <td class="spaced"></td>
+            <td class="spaced"></td>
+            <td class="spaced"></td>
+            <td class="spaced"></td>
+            <td class="spaced"></td>
+            <td class="spaced"></td>
+            <td class="spaced"></td>
+            <td>
+                <img src="phonePic.png" width="400">
+            </td>
+        </tr>
+    </table>
+
+    <div class="header">Instantly save EVERY picture you take on your trip to a Google Drive!</div>
+
+    <div class="cta-section">
+        <a href="https://ifttt.com/applets/REqiLwnV-save-new-ios-photos-to-google-drive" target="_blank"
+            class="cta-button">
+            ✦ Try the Applet Now ✦
+        </a>
+    </div>
+
+    <div class="carousel-section">
+        <div class="carousel-label">✦ Memories Loading... ✦</div>
+
+        <div class="carousel-wrapper">
+            <button class="carousel-btn" onclick="moveCarousel(-1)">&#8592;</button>
+
+            <div class="carousel-window">
+                <div class="carousel-track" id="carouselTrack">
+                    <img src="vacayphoto1.png" alt="vacation photo 1">
+                    <img src="vacayphoto2.png" alt="vacation photo 2">
+                    <img src="vacayphoto3.png" alt="vacation photo 3">
+                    <img src="vacayphoto4.png" alt="vacation photo 4">
+                    <img src="vacayphoto5.png" alt="vacation photo 5">
+                    <img src="vacayphoto6.png" alt="vacation photo 6">
+                    <img src="vacayphoto7.png" alt="vacation photo 7">
+                    <img src="vacayphoto8.png" alt="vacation photo 8">
+                    <img src="vacayphoto9.png" alt="vacation photo 9">
+                    <img src="vacayphoto10.png" alt="vacation photo 10">
+                    <img src="vacayphoto11.png" alt="vacation photo 11">
+                    <img src="vacayphoto12.png" alt="vacation photo 12">
+                    <img src="vacayphoto13.png" alt="vacation photo 13">
+                    <img src="vacayphoto14.png" alt="vacation photo 14">
+                    <img src="vacayphoto15.png" alt="vacation photo 15">
+                </div>
+            </div>
+
+            <button class="carousel-btn" onclick="moveCarousel(1)">&#8594;</button>
+        </div>
+
+        <div class="carousel-dots" id="carouselDots"></div>
+    </div>
+
+    <div class="header">See how it works</div>
+    <div class="figma-section">
+        <iframe width="100%" height="500"
+            src="https://embed.figma.com/proto/pmFsaGU7Qrr1UhzfsNzq8H/Untitled?node-id=26-162&scaling=scale-down&content-scaling=fixed&page-id=9%3A21&starting-point-node-id=22%3A2&show-proto-sidebar=1&embed-host=share"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <div class="cta-section" style="padding-bottom: 80px;">
+        <a href="https://ifttt.com/applets/REqiLwnV-save-new-ios-photos-to-google-drive" target="_blank"
+            class="cta-button">
+            ✦ Get Started Free ✦
+        </a>
+    </div>
+
+
+    <script>
+        const PHOTOS_PER_PAGE = 3;
+        const TOTAL_PHOTOS = 15;
+
+        const TOTAL_PAGES = Math.ceil(TOTAL_PHOTOS / PHOTOS_PER_PAGE);
+
+        let currentPage = 0;
+
+        const track = document.getElementById('carouselTrack');
+        const dotsContainer = document.getElementById('carouselDots');
+
+        for (let i = 0; i < TOTAL_PAGES; i++) {
+            const dot = document.createElement('span');
+            dot.className = 'dot';
+            if (i === 0) dot.classList.add('active');
+            dot.onclick = () => goToPage(i);
+            dotsContainer.appendChild(dot);
+        }
+
+        function moveCarousel(direction) {
+            currentPage = currentPage + direction;
+
+            if (currentPage < 0) currentPage = TOTAL_PAGES - 1;
+            if (currentPage >= TOTAL_PAGES) currentPage = 0;
+
+            goToPage(currentPage);
+        }
+
+        function goToPage(pageNumber) {
+            currentPage = pageNumber;
+
+            track.style.transform = `translateX(-${pageNumber * 100}%)`;
+
+            document.querySelectorAll('.dot').forEach((dot, index) => {
+                dot.classList.toggle('active', index === pageNumber);
+            });
+        }
+    </script>
+
+</body>
+
+</html>

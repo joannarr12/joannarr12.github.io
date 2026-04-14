@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single+Ink:wght@100..900&family=Gabarito:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single+Ink:wght@100..900&family=Cal+Sans&family=Gabarito:wght@400..900&display=swap');
+
+body {
+    background-color: #f7b720;
+    font-family: "Gabarito", sans-serif;
+    margin: 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    display: block;
+    color: white;
+    font-family: "Gabarito", sans-serif;
+    text-decoration: none;
+    padding: 14px 70px;
+}
+
+.navbar a:hover {
+    background-color: #f35900;
+    transition: background-color 1s ease;
+    border-radius: 20px;
+}
+
+.title {
+    color: #f35900;
+    font-family: "Cal Sans", sans-serif;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+}
+
+.hero-image {
+    background-image: url('vacayPhoto.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center -15vw;
+    height: 550px;
+    width: 100%;
+}
+
+.bodytxtcontainer {
+    position: relative;
+    width: 550px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    padding-top: 70px;
+    padding-left: 50px;
+}
+
+.bodytxt {
+    color: #f35900;
+    font-family: "Cal Sans", sans-serif;
+    display: flex;
+    justify-content: left;
+    font-size: 50px;
+    overflow-wrap: break-word;
+}
+
+td {
+    display: inline-block;
+}
+
+td.spaced {
+    margin-left: 20px;
+}
+
+.header {
+    color: #f35900;
+    font-family: "Cal Sans", sans-serif;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 70px;
+    padding-top: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.cta-section {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #f35900;
+    color: #f7b720;
+    font-family: "Cal Sans", sans-serif;
+    font-size: 28px;
+    text-decoration: none;
+    padding: 22px 60px;
+    border-radius: 60px;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 4px 4px 0px #c44200;
+}
+
+.cta-button:hover {
+    background-color: #c44200;
+    transform: translateY(-3px);
+    box-shadow: 6px 6px 0px #8a2d00;
+}
+
+
+.carousel-section {
+    padding: 60px 40px 40px;
+}
+
+.carousel-label {
+    text-align: center;
+    font-family: "Cal Sans", sans-serif;
+    font-style: italic;
+    font-size: 28px;
+    color: #f35900;
+    margin-bottom: 30px;
+}
+
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.carousel-window {
+    flex: 1;          
+    overflow: hidden; 
+    border-radius: 20px;
+}
+
+.carousel-track {
+    display: flex;                       
+    transition: transform 0.5s ease;    
+}
+
+.carousel-track img {
+    width: calc(100% / 3); 
+    flex-shrink: 0;          
+    height: 420px;
+    object-fit: cover;       
+    border-radius: 16px;
+    padding: 0 8px;
+    box-sizing: border-box;
+}
+
+.carousel-btn {
+    background-color: #f35900;
+    color: #f7b720;
+    border: none;
+    font-size: 28px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    box-shadow: 3px 3px 0px #c44200;
+}
+
+.carousel-btn:hover {
+    background-color: #c44200;
+    transform: scale(1.08);
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #f35900;
+    opacity: 0.35;
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.dot.active {
+    opacity: 1;
+    transform: scale(1.3);
+}
+
+.figma-section {
+    margin: 30px 40px 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 6px 6px 0px #c44200;
+    border: 3px solid #f35900;
+}
+
+.figma-section iframe {
+    display: block;
+    border: none;
+}
