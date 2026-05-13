@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joanna | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar" id="folder-nav"></nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- HOME VIEW -->
+            <section id="view-home" class="content-view">
+                <div class="hero-section">
+                    <div class="intro-text">
+                        <h1>Hello, I'm Joanna</h1>
+                        <p>and this is my work. Wanna chat? <a href="mailto:joannaraymondruiz@gmail.com">Email me</a></p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/joannarr02/">Instagram</a>
+                        <a href="https://www.linkedin.com/in/joanna-raymond-ruiz-02ab86237/">LinkedIn</a>
+                    </div>
+                </div>
+                <!-- This will now display your actual projects -->
+                <div class="shuffle-gallery" id="home-gallery"></div>
+            </section>
+
+            <!-- CATEGORY VIEW -->
+            <section id="view-category" class="content-view" style="display:none;">
+                <h1 id="cat-title">Category Name</h1>
+                <div class="carousel" id="project-carousel"></div>
+                <div id="project-detail" class="detail-section"></div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
